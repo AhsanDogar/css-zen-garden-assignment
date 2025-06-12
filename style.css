@@ -1,0 +1,120 @@
+/* 
+  Author: Muhammad Ahsan 
+  Course: COMP1054 - Assignment One
+  Description: Custom CSS Zen Garden Design
+*/
+
+/* Reset some basic styles */
+body, h1, h2, h3, p, ul {
+  margin: 0;
+  padding: 0;
+  font-family: 'Lora', serif;
+}
+
+/* Background + color (Requirement #3 and #4) */
+body {
+  background: linear-gradient(120deg, #e0f7fa, #e1bee7);
+  color: #2e2e2e;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+/* Custom Fonts (Requirement #5) */
+@import url('https://fonts.googleapis.com/css2?family=Lora&family=Montserrat:wght@600&display=swap');
+
+h1, h2, h3 {
+  font-family: 'Montserrat', sans-serif;
+  color: #6a1b9a;
+}
+
+/* Example of type selector (Requirement #2) */
+p {
+  font-size: 1rem;
+  padding-bottom: 1rem; /* box model example (Requirement #6) */
+}
+
+/* Example of class selector */
+.intro {
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 8px;
+}
+
+/* Example of ID selector */
+#zen-intro {
+  border-left: 5px solid #6a1b9a;
+  padding-left: 1rem;
+}
+
+/* Example of attribute selector */
+a[href^="http"] {
+  color: #1e88e5;
+  text-decoration: none;
+}
+
+/* Example of pseudo-class selector */
+a:hover {
+  text-decoration: underline;
+  color: #c2185b;
+}
+
+/* Example of pseudo-element selector */
+p::first-line {
+  font-weight: bold;
+}
+
+/* Descendant combinator example */
+.main p {
+  font-style: italic;
+}
+
+/* Child combinator example */
+header > h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Direct sibling combinator example */
+h2 + p {
+  color: #4e342e;
+}
+
+/* General sibling combinator example */
+h3 ~ p {
+  background-color: #f3e5f5;
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+
+/* Box Model Example (Requirement #6) */
+.page-wrapper {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Creative element - hover transition and image filter (Requirement #7) */
+img {
+  max-width: 100%;
+  transition: transform 0.3s ease;
+  filter: grayscale(20%);
+}
+
+img:hover {
+  transform: scale(1.05);
+  filter: grayscale(0%);
+}
+
+/* Responsive typography (Requirement #5) */
+html {
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+}
